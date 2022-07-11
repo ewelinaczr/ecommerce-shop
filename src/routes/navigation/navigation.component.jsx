@@ -1,18 +1,18 @@
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
-// COMPONENTS 
+// COMPONENTS
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
-// REDUX 
-import { selectCurrentUser } from "../../store/user/user.selector";
-import { selectIsCartOpen } from "../../store/cart/cart.selector";
-// ICONS 
+// REDUX
+import { selectCurrentUser } from "../../store/user/user.selector.ts";
+import { selectIsCartOpen } from "../../store/cart/cart.selector.ts";
+// ICONS
 // import svg logo as component - <Logo> component
 import { ReactComponent as Logo } from "../../assets/logo2.svg";
-// FIREBASE 
-import { signOutUser } from "../../utils/firebase/firebase.utils";
-// STYLES 
+// FIREBASE
+import { signOutUser } from "../../utils/firebase/firebase.utils.ts";
+// STYLES
 import {
 	NavigationContainer,
 	NavLinks,
@@ -30,7 +30,7 @@ const Navigation = () => {
 			<NavigationContainer>
 				{/* Link to='/' */}
 				<LogoContainer to='/'>
-					<Logo className='logo'/>
+					<Logo className='logo' />
 				</LogoContainer>
 				<NavLinks>
 					<NavLink to='/shop'>SHOP</NavLink>
