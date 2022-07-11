@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 import { useSelector } from "react-redux";
-
+// REDUX 
 import { selectCategoriesMap } from "../../store/categories/category.selector";
-
+// COMPONNETS 
 import CategoryPreview from "../../components/category-preview/category-preview.component";
 
 const CategoriesPreview = () => {

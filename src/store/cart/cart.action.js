@@ -1,6 +1,8 @@
 import { createAction } from '../../utils/reducer/reducer.utils';
 import { CART_ACTION_TYPES } from './cart.types';
 
+// 1. PURE LOGIC OF HOW TO CHANGE AMOUNT OF ITEMS 
+
 const addCartItem = (cartItems, productToAdd) => {
   const existingCartItem = cartItems.find(
     (cartItem) => cartItem.id === productToAdd.id
@@ -38,6 +40,10 @@ const removeCartItem = (cartItems, cartItemToRemove) => {
 
 const clearCartItem = (cartItems, cartItemToClear) =>
   cartItems.filter((cartItem) => cartItem.id !== cartItemToClear.id);
+
+
+// 2. ACTIONS DECLARED IN REDUCER - CHANGING STATE 
+
 
 export const addItemToCart = (cartItems, productToAdd) => {
   const newCartItems = addCartItem(cartItems, productToAdd);

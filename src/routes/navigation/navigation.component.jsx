@@ -1,14 +1,18 @@
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
+// COMPONENTS 
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
+// REDUX 
 import { selectCurrentUser } from "../../store/user/user.selector";
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
+// ICONS 
 // import svg logo as component - <Logo> component
 import { ReactComponent as Logo } from "../../assets/logo2.svg";
+// FIREBASE 
 import { signOutUser } from "../../utils/firebase/firebase.utils";
-
+// STYLES 
 import {
 	NavigationContainer,
 	NavLinks,
@@ -17,6 +21,7 @@ import {
 } from "./navigation.styles";
 
 const Navigation = () => {
+	// useSelector((state) => state.user.currentUser)
 	const currentUser = useSelector(selectCurrentUser);
 	const isCartOpen = useSelector(selectIsCartOpen);
 

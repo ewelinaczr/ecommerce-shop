@@ -4,6 +4,9 @@ const INITIAL_STATE = {
   currentUser: null,
 };
 
+// not pointing to specific reducer anymore (vs useReducer)
+// so by default return unchanged state - not this type changed 
+// One combined root reducer for all actions 
 export const userReducer = (state = INITIAL_STATE, action) => {
   const { type, payload } = action;
 

@@ -94,6 +94,7 @@ export const getCategoriesAndDocuments = async () => {
 	// get query data
 	const querySnapshot = await getDocs(q);
 	// mapping all cattegories to get products groups titles
+	// gives back categoriesArray
 	return querySnapshot.docs.map((docSnapshot) => docSnapshot.data());
 };
 

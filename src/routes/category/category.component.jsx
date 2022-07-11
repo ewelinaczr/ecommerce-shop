@@ -1,11 +1,11 @@
 import { useState, useEffect, Fragment } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-
+// COMPONENTS
 import ProductCard from '../../components/product-card/product-card.component';
-
+// REDUX 
 import { selectCategoriesMap } from '../../store/categories/category.selector';
-
+// STYLES
 import { CategoryContainer, Title } from './category.styles';
 
 const Category = () => {
