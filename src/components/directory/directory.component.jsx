@@ -42,7 +42,7 @@ const categories = [
 
 const Directory = () => {
 	return (
-		<DirectoryContainer>
+		<DirectoryContainer style={{ maxWidth: "1600px", margin: "auto" }}>
 			{categories.map((category) => (
 				<DirectoryItem key={category.id} category={category} />
 			))}
